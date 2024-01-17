@@ -8,7 +8,7 @@ function HeaderDisplay() {
   return (
     <div className="header-display-container">
         <img src={placeHolder} />
-        <SplashTxt />
+        <SplashTxt className="splash-text"/>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.header-container {
+    position: relative;
+    /* Set to relative */
+    width: 100%;
+}
+
+.splash-text {
+    position: absolute;
+    /* Position it absolutely */
+    top: 50%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* Adjust rotation angle as needed */
+    color: #fbff00;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
