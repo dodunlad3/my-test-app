@@ -8,9 +8,11 @@ import discordIcon from "../../images/discord-icon.png";
 function Footer() {
   return (
     <div className="footer-container">
-        <a href=""><img src={instaIcon} /></a>
-        <a href=""><img src={twitterIcon} /></a>
-        <a href=""><img src={discordIcon} /></a>
+        <a href=""><img src={instaIcon} alt="Instagram Icon" className="footer-icon" /></a>
+        <a href=""><img src={twitterIcon} alt="Twitter Icon" className="footer-icon" /></a>
+        <a href=""><img src={discordIcon} alt="Discord Icon" className="footer-icon" /></a>
     </div>
   );
 }
+
+export default Footer;

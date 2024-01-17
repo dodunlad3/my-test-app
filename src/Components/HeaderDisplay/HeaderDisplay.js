@@ -12,3 +12,5 @@ function HeaderDisplay() {
     </div>
   );
 }
+
+export default HeaderDisplay;

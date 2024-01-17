@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/NavBar/NavBar';
+import HeaderDisplay from './Components/HeaderDisplay/HeaderDisplay';
+import TextSection from './Components/TextSection/TextSection';
+import ImageDisplay from './Components/ImageDisplay/ImageDisplay';
+import Footer from './Components/Footer/Footer';
+import placeHolder from './images/placeholder.png';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <HeaderDisplay src={placeHolder} />
       </header>
+      <main>
+        <TextSection title="Section 1" text="Content for section 1 here" />
+        <ImageDisplay src={placeHolder} />
+        <TextSection title="Section 2" text="Content for section 2 here" />
+        <ImageDisplay src={placeHolder} />
+      </main>
+      <Footer />
     </div>
   );
 }
