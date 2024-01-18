@@ -7,6 +7,7 @@ import discordIcon from "../../images/discord-icon.png";
 
 function Footer() {
   return (
+    //This can be an id instead of a class name since this container will likely be unique
     <div className="footer-container">
         <a href=""><img src={instaIcon} alt="Instagram Icon" className="footer-icon" /></a>
         <a href=""><img src={twitterIcon} alt="Twitter Icon" className="footer-icon" /></a>

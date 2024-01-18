@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'; //You can remove this import or comment it out if you are not using it.
 import NavBar from './Components/NavBar/NavBar';
 import HeaderDisplay from './Components/HeaderDisplay/HeaderDisplay';
 import TextSection from './Components/TextSection/TextSection';
@@ -8,6 +8,7 @@ import placeHolder from './images/placeholder.png';
 
 function App() {
   return (
+    //You are passing in a src parameter to ImageDisplay without the component requesting for a src parameter
     <div className="App">
       <NavBar />
       <header className="App-header">

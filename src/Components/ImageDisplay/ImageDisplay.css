@@ -1,3 +1,4 @@
+/* id selector is used instead of class selector. You used className so you should be using .image, not #image */
 #image-display-container {
   position: relative;
   width: 100%;

@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Feedback
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I like what you've done so far. Below are is some feedback. You can also find comments in the source files as I also left comments there.
 
-## Available Scripts
+#### App.js
 
-In the project directory, you can run:
+You could remove line 1 since App.css is not being used.\
+You are passing in a src parameter into component ImageDisplay even though you are not expecting any parameters for that component.
 
-### `npm start`
+#### ImageDisplay.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If you are looking to pass image src from various components, you should add a src parameter or props.\
+You used classNames for html elements, but you used id selectors in your css. Whatever you have in imageDisplay.css is not being shown. You can test that by adding obvious css changes to one of the elements.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Footer.js
 
-### `npm test`
+You can change footer-container into an id instead of a class name since this container will likely be unique.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### HeaderDisplay.js and SplashText.js
 
-### `npm run build`
+Assigning className to SplashText will not be like a normal html element's className. Rather you are passing a parameter named className assigned as "splash-text". You would be able to access the parameter through props.className. This does not look like your intended usage.\
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Any css changing SplashTxt as a class should be put in a css file in the SplashText directory. If you want to change this specific SplashText and not all of it you should create a wrapper. An example is shown below:\
+<div id="splash-text-container">\
+    <SplashTxt/>\
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### TextSection.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+There is no need to assign a class name if you are not going to use it for anything.

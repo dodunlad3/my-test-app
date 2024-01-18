@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
 }
-
+/* CSS that changes all SplashText components should not be placed outside the SplashText directory */
 .splash-text {
     position: absolute;
     top: 50%;
